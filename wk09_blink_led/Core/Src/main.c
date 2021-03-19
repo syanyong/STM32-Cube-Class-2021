@@ -96,8 +96,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	unsigned int button_state = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
-	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, button_state);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+	HAL_Delay(1000);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
+	HAL_Delay(1000);
 
   }
   /* USER CODE END 3 */
