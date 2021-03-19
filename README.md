@@ -2,5 +2,5 @@
 The boilerplate for Microcontroller Class 
 
 # Author
-SARUCHA YANYONG (Lecturer)
-THANAPOOM PUMEE (TA)
+1. SARUCHA YANYONG (Lecturer)
+2. THANAPOOM PUMEE (TA)
