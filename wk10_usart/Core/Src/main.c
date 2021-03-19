@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,13 +90,20 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  unsigned char tmp_ch[100];
+  float pi = 3.14159;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+   //HAL_UART_Transmit(&huart2, "Hello RAI \n",11, 1000);
+	  //HAL_Delay(1000);
+
+	  sprintf(&tmp_ch,"%.2f,%d,%s \n",pi,3,"STM32");
+	  HAL_UART_Transmit(&huart2, tmp_ch, strlen(tmp_ch), 1000);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
