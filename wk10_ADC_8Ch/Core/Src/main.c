@@ -107,55 +107,70 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_ADC_Stop(&hadc1);
 	  sConfig0.Channel = ADC_CHANNEL_0;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  //HAL_ADC_PollForConversion(&hadc1, 1);
+	  while(!(__HAL_ADC_GET_FLAG(&hadc1, ADC_SR_EOC))){}
 	  SS[0] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
+	  HAL_Delay(1);
 
 	  sConfig0.Channel = ADC_CHANNEL_1;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
+	  //while(!(__HAL_ADC_GET_FLAG(&hadc1, ADC_SR_EOC))){}
 	  SS[1] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
+	  HAL_Delay(1);
 
 	  sConfig0.Channel = ADC_CHANNEL_4;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
+	  //while(!(__HAL_ADC_GET_FLAG(&hadc1, ADC_SR_EOC))){}
 	  SS[2] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
+	  HAL_Delay(1);
 
 	  sConfig0.Channel = ADC_CHANNEL_6;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
 	  SS[3] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  sConfig0.Channel = ADC_CHANNEL_7;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
 	  SS[4] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  sConfig0.Channel = ADC_CHANNEL_8;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
 	  SS[5] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  sConfig0.Channel = ADC_CHANNEL_9;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
 	  SS[6] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  sConfig0.Channel = ADC_CHANNEL_10;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig0);
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1);
 	  SS[7] = HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
-	  sprintf(&tmp_ch,"%d %d %d %d %d %d %d %d \n",SS[1],SS[2],SS[3],SS[4],SS[5],SS[6],SS[7],SS[0]);
+	  sprintf(&tmp_ch,"%d %d %d %d %d %d %d %d \n",SS[0],SS[1],SS[2],SS[3],SS[4],SS[5],SS[6],SS[7]);
 	  HAL_UART_Transmit(&huart2, tmp_ch,strlen(tmp_ch), 1000);
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
