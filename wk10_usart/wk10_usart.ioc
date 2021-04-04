@@ -10,7 +10,11 @@ Mcu.PinsNb=7
 ProjectManager.NoMain=false
 RCC.PLLCLKFreq_Value=80000000
 RCC.PLLQCLKFreq_Value=40000000
+<<<<<<< HEAD
 ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false
+=======
+ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false,3-MX_USART1_UART_Init-USART1-false-HAL-true
+>>>>>>> teaching_wk10
 RCC.RTCFreq_Value=32000
 ProjectManager.DefaultFWLocation=true
 ProjectManager.DeletePrevious=true

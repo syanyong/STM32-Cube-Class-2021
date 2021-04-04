@@ -22,8 +22,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+<<<<<<< HEAD
 #include "string.h"
 #include "stdio.h"
+=======
+
+>>>>>>> teaching_wk10
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,7 +71,11 @@ static void MX_USART2_UART_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+<<<<<<< HEAD
   unsigned char tmp_ch[100];
+=======
+
+>>>>>>> teaching_wk10
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -97,9 +105,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+<<<<<<< HEAD
 	  sprintf(&tmp_ch, "%f %d %s\n", 3.14, 56, "RAI");
 	  HAL_UART_Transmit(&huart2, tmp_ch, strlen(tmp_ch), 1000);
 	  HAL_Delay(1000);
+=======
+>>>>>>> teaching_wk10
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

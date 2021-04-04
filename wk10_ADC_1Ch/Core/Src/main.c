@@ -102,11 +102,27 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+<<<<<<< HEAD
 	HAL_ADC_Start(&hadc1);
 	SS0 = HAL_ADC_GetValue(&hadc1);
 	sprintf(&tmp_ch,"%d \n",SS0);
 	HAL_UART_Transmit(&huart2, tmp_ch,strlen(tmp_ch), 1000);
 	HAL_Delay(100);
+=======
+	//Make some PWM from GPIO PA5, Start with state HIGH
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	//Start to read ADC with out DMA
+	HAL_ADC_Start(&hadc1);
+	// Check Have the ADC complete yet?
+	HAL_ADC_PollForConversion(&hadc1, 1);
+	SS0 = HAL_ADC_GetValue(&hadc1);
+	// After ADC complete Set PA5 to state LOW
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+
+	sprintf(&tmp_ch,"%d \n",SS0);
+	HAL_UART_Transmit(&huart2, tmp_ch,strlen(tmp_ch), 1000);
+	HAL_Delay(1);
+>>>>>>> teaching_wk10
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

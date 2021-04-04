@@ -9,6 +9,7 @@ CDefines=USE_HAL_DRIVER;STM32F401xE;USE_HAL_DRIVER;USE_HAL_DRIVER;
 [PreviousGenFiles]
 AdvancedFolderStructure=true
 HeaderFileListSize=3
+<<<<<<< HEAD
 HeaderFiles#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/Core/Inc/stm32f4xx_it.h
 HeaderFiles#1=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/Core/Inc/stm32f4xx_hal_conf.h
 HeaderFiles#2=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/Core/Inc/main.h
@@ -21,5 +22,19 @@ SourceFiles#1=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/
 SourceFiles#2=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/Core/Src/main.c
 SourceFolderListSize=1
 SourcePath#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uCSTM32_2021/wk10_usart/Core/Src
+=======
+HeaderFiles#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Inc/stm32f4xx_it.h
+HeaderFiles#1=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Inc/stm32f4xx_hal_conf.h
+HeaderFiles#2=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Inc/main.h
+HeaderFolderListSize=1
+HeaderPath#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Inc
+HeaderFiles=;
+SourceFileListSize=3
+SourceFiles#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Src/stm32f4xx_it.c
+SourceFiles#1=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Src/stm32f4xx_hal_msp.c
+SourceFiles#2=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Src/main.c
+SourceFolderListSize=1
+SourcePath#0=/Users/syanyong/Documents/STM32CubeIDE_WS/uC_STM32_2021/wk10_usart/Core/Src
+>>>>>>> teaching_wk10
 SourceFiles=;
 
