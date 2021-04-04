@@ -64,6 +64,7 @@ ProjectManager.BackupPrevious=false
 MxCube.Version=6.2.0
 RCC.VCOInputFreq_Value=2000000
 PA14.Mode=Serial_Wire
+NVIC.TIM2_IRQn=true\:0\:0\:false\:false\:true\:true\:true
 File.Version=6
 VP_SYS_VS_Systick.Mode=SysTick
 NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true\:false\:false
