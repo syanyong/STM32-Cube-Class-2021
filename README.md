@@ -1,5 +1,4 @@
-# uC2021
-The boilerplate for Microcontroller Class 
+# Microcontroller and Interface 2021 class
 
 # Author
 1. SARUCHA YANYONG (Lecturer)
